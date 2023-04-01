@@ -46,7 +46,7 @@ string infixtoposfix(const string text){
             }
         }
         else{
-            if(!s.empty() && priority(s.top()) >= priority(c) ){
+            while(!s.empty() && priority(s.top()) >= priority(c) ){
                 val += s.top();
                 s.pop();
             }
@@ -66,7 +66,7 @@ int main(){
     string text;
     while(getline(cin,text)){
         string posfix=infixtoposfix(text);
-
+    //cout << posfix << " ";
     stack<long long int> s2;   
 
     for(char c : posfix){
@@ -97,8 +97,8 @@ int main(){
             s2.pop();
             b = s2.top();
             s2.pop();
-
-            s2.push(b/a);
+            int num = (b/a);
+            s2.push(num);
 
         }
         else if(c == '%'){

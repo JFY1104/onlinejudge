@@ -1,6 +1,9 @@
-#include<iostream>
+#include "title.h"
 int main(){
-    int a = 11/5;
-    int b = a;
-    std::cout << b;
+    string val,day;
+    getline(cin,day);
+    for(int i =0 ;i <=4; i++){
+        cout << day.substr(i,1) << endl;
+    }
+    
 }

@@ -1,14 +1,21 @@
      a009 for遍歷 / <string>
      a010 質數篩法
      a015 動態分配陣列 / return 0;
-
+     s020
 sstream
+     a271
+     b515 map<key type,value type>
      a017 f377+f689
+     d018 stream清空    str.find()->return所設定字串的所在位置的值
+          s1.str("")    str.substr(起點(必要),(無->默認擷取到結尾))
+          s1.clear()    str.substr(起點,擷取長度)
+     d098 char-'0' 能換成整數
      f377 <stack> / getline()
           <stringstream>(切換string以及int)
           isdigit() 判斷是否為數字
           isalpha() 判斷是否為字母 --> isupper/islower/isspace
           stack pop要注意記憶體區段錯誤(檢查empty)
      f689 <stringstream> 將string分割成char
-          stoi()可將string轉換成int
-          atoi()可將char轉成int
+          stoi() atoi()
+          兩者都是把STRING轉成INT
+          但前者為 const string* 後者為 const char*

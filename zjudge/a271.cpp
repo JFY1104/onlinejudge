@@ -6,9 +6,10 @@ using namespace std;
 
 int main(){
     int testtimes;
-    cin >> testtimes;                       //輸入測資數目
+    cin >> testtimes;   
+    cin.ignore();                       //輸入測資數目
     for(int i = 1 ; i <= testtimes ; i++){  //執行(測資數目)次
-        cin.ignore();                       
+                            
         string first ,second ;              //first為xyzwnm ,second為每天吃的蘿蔔
         int hp=0;                           //hp為血量 debuff為中毒狀態
         int debuff=0;
@@ -33,7 +34,7 @@ int main(){
         
         if(second == ""){                              //如果直接問第一天體重 就輸出m 並break
             cout << parameter[6] << 'g'  << endl;
-            break;    
+            continue;    
         }
 
         hp += parameter[6];

@@ -1,10 +1,19 @@
      a009 for遍歷 / <string>
      a010 質數篩法
      a015 動態分配陣列 / return 0;
-     s020
-sstream
-     a271
+     a020 map char-'0'可換成int
+     a022 <algorithm> 的reverse() 
+          搭配 str.begin() str.end()
+          翻轉字串/陣列
+          get/getline 都讀取一行 但前者會保留\n
+                      後者不會
+     a024 輾轉相除法
+     a034 stack 2進位<bitset>
+     a038 利用sstream可將string轉成int 直接輸出 
+     a271 cin.ignore()要寫在cin下面 break/continue差別
      b515 map<key type,value type>
+sstream
+     a038 string turn into int 
      a017 f377+f689
      d018 stream清空    str.find()->return所設定字串的所在位置的值
           s1.str("")    str.substr(起點(必要),(無->默認擷取到結尾))

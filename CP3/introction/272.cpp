@@ -21,8 +21,9 @@ int main(){
                 flag = 0;
             }
         }
-        for(int i = 0; i < obj.size() ; i++){
-            cout << obj[i];
+        for (auto it = obj.begin(); it != obj.end(); it++)
+        {
+            cout << *it;
         }
         obj.clear();        
     }

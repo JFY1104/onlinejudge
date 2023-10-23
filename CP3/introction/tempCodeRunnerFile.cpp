@@ -7,6 +7,10 @@ int main(){
     int flag=0;
     while(getline(cin,str)){
         vector<char> obj(str.begin(), str.end());
+        // for (auto it = obj.begin(); it != obj.end(); it++)
+        // {
+        //     cout << *it;
+        // }
         for(auto it=obj.begin(); it != obj.end() ; it++){
             
             if(*it == '"' && flag ==0){
@@ -22,7 +26,6 @@ int main(){
                 cout << *it;
             }
         }
-        cout << endl;
         obj.clear();        
     }
 }

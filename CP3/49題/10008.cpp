@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <map>
 #include <vector>
+#include <numeric>
 using namespace std;
 // https://blog.csdn.net/qian2213762498/article/details/81773289
 // https://shengyu7697.github.io/std-sort/
@@ -14,11 +15,14 @@ bool cmp(pair<char, int> a, pair<char, int> b)
         return a.first < b.first;
 }
 int main(){
+    #include <numeric> // Include the <numeric> header for gcd function
+
+    cout << gcd(10, 15) << endl;
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
     map<char, int> m;
-    
+
     int n;
     cin >> n;
     cin.ignore();

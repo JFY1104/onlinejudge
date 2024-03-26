@@ -4,7 +4,7 @@
 #include<vector>
 #include<algorithm>
 #include<string>
-// sorty在algorithm庫 要記他的自訂義排序用法 以及vector pair的用法
+// sort在algorithm庫 要記他的自訂義排序用法 以及vector pair的用法
 using namespace std;
 bool cmp(pair<char, int> a, pair<char, int> b){
     if(a.second != b.second){

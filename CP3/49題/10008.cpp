@@ -17,7 +17,7 @@ bool cmp(pair<char, int> a, pair<char, int> b)
 int main(){
     #include <numeric> // Include the <numeric> header for gcd function
 
-    cout << gcd(10, 15) << endl;
+    
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);

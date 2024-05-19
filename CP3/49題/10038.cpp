@@ -1,39 +1,52 @@
 //  https: // zerojudge.tw/ShowProblem?problemid=d097
 #include <iostream>
-#include <cstring>
+//#include <cstring>
 using namespace std;
 // abs在cmath
+//簡單來說，就是要檢查1 ~n - 1的差值是否都存在，差值不一定要3->2->1，
+//也可以是2->3->1，總而言之就是1 ~n - 1的差值都要存在就是Jolly了！
+
+
 int main()
 {
-    int n;
-    while (cin >> n)
+
+    int num;
+    while (cin >> num)
     {
-        int pre, now;
-        int d[n]; // initial value not guanranteed to be zero
-        for (int i = 0; i < n; i++)
+        if (num == 1) //只有一個就直接continue
         {
-            d[i] = 0;
+            int temp = 0;
+            cin >> temp;
+            cout << "Jolly" << endl;
+            continue;
         }
+        int arr[num];
+        for (int i = 0; i < num; i++)
+        {
+            arr[i] = 0;
+        }
+        int pre = 0, now = 0;
         cin >> pre;
-        for (int i = 1; i < n; i++)
+        for (int i = 1; i < num; i++)
         {
             cin >> now;
-            d[abs(now - pre)]++;
+            int a = abs(pre - now);
+            if (a >= 1 && a < num) //記得加條件不然arr會有錯
+                arr[a]++;
             pre = now;
         }
-        bool flag = true;
-        for (int i = 1; i < n; i++)
+        bool flag = 1;
+        for (int i = 1; i < num; i++)
         {
-            if (d[i] != 1)
+            if (arr[i] != 1)
             {
-                flag = false;
+                flag = 0;
                 break;
             }
         }
         if (flag)
-            cout << "Jolly\n";
+            cout << "Jolly" << endl;
         else
-            cout << "Not jolly\n";
+            cout << "Not jolly" << endl;
     }
-    return 0;
 }

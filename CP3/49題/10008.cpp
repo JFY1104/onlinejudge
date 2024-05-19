@@ -1,12 +1,8 @@
 #include <iostream>
-#include <algorithm>
 #include <map>
 #include <vector>
-#include <numeric>
+#include <algorithm>
 using namespace std;
-// https://blog.csdn.net/qian2213762498/article/details/81773289
-// https://shengyu7697.github.io/std-sort/
-
 bool cmp(pair<char, int> a, pair<char, int> b)
 {
     if (a.second != b.second)
@@ -14,33 +10,31 @@ bool cmp(pair<char, int> a, pair<char, int> b)
     else
         return a.first < b.first;
 }
-int main(){
-    #include <numeric> // Include the <numeric> header for gcd function
-
-    
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
+int main()
+{
+    int cases;
+    string s;
+    cin >> cases;
+    getline(cin, s);
     map<char, int> m;
 
-    int n;
-    cin >> n;
-    cin.ignore();
-    string s;
-    while (n--)
+    while (cases != 0)
     {
         getline(cin, s);
-        for(auto &c : s){
-            if(isalpha(c)){
-                c = toupper(c);
-                m[c] ++;
+        for (auto &i : s)
+        {
+            if (isalpha(i))
+            {
+                i = toupper(i);
+                m[i]++;
             }
         }
+        cases--;
     }
     vector<pair<char, int>> v(m.begin(), m.end());
     sort(v.begin(), v.end(), cmp);
-    for (const auto &p : v)
+    for (auto j : v)
     {
-        std::cout << p.first << " " << p.second << "\n";
+        cout << j.first << " " << j.second << endl;
     }
 }

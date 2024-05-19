@@ -26,3 +26,30 @@ int main()
     }
     return 0;
 }
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     string s1[101];
+//     int row = 0;
+//     int col = 0;
+
+//     while (getline(cin, s1[row]))
+//     {
+//         if (s1[row].length() > col)
+//             col = s1[row].length();
+//         row++;
+//     }
+//     for (int j = 0; j < col; j++)
+//     {
+//         for (int i = row - 1; i >= 0; i--)
+//         {
+//             if (s1[i].length() > j)
+//                 cout << s1[i][j];
+//             else
+//                 cout << " ";
+//         }
+//         cout << endl;
+//     }
+// }

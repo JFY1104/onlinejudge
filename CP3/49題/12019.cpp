@@ -1,28 +1,26 @@
 #include <iostream>
 using namespace std;
 // 2011/1/1禮拜六 以此類推即可
-int doom[13] = {-1, 10, 21, 7, 4, 9, 6, 11, 8, 5, 10, 7, 12};
-string date[] = {"Monday", "Tuesday", "Wednesday",
-                 "Thursday", "Friday", "Saturday", "Sunday"};
+#include <iostream>
+#include <map>
+using namespace std;
 
 int main()
 {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    int T, m, d;
-    cin >> T;
-    while (T--)
+    int cases;
+    cin >> cases;
+    string Day[] = {"Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
+    int Month[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    while (cases--)
     {
+        int m, d;
         cin >> m >> d;
-        int delta = (d - doom[m]) % 7;
-        if (delta >= 0)
+        int days = 0;
+        for (int i = 0; i < m; i++)
         {
-            cout << date[delta] << "\n";
+            days += Month[i];
         }
-        else
-        {
-            cout << date[7 + delta] << "\n";
-        }
+        int ans = (days + d - 1) % 7;
+        cout << Day[ans] << endl;
     }
-    return 0;
 }

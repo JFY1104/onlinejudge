@@ -1,36 +1,27 @@
 #include <iostream>
-#include <map>
 using namespace std;
-// https://zerojudge.tw/ShowProblem?problemid=e578
 int main()
 {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    string s[] = {"~!@#$%^&*()_+",
-                  "`1234567890-=",
-                  "qwertyuiop[]\\",
-                  "asdfghjkl;'",
-                  "zxcvbnm,./"};
+    char table[] = "`1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./";
+    string s;
 
-    map<char, char> mp;
-    for (int i = 0; i < 5; i++)
+    while (getline(cin, s))
     {
-        for (int j = 2; j < s[i].size(); j++)
+        for (auto a : s)
         {
-            mp[s[i][j]] = s[i][j - 2];
-        }
-    }
-    string S;
-    while (getline(cin, S))
-    {
-        for (int i = 0; i < S.size(); i++)
-        {
-            if (S[i] == ' ')
+            if (a == ' ')
                 cout << " ";
             else
-                cout << mp[S[i]];
+            {
+                for (int i = 0; i < sizeof(table); i++)
+                {
+                    if (isalpha(a)) //小心大寫要轉小寫
+                        a = tolower(a);
+                    if (a == table[i])
+                        cout << table[i - 2];
+                }
+            }
         }
         cout << "\n";
     }
-    return 0;
 }

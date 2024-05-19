@@ -1,26 +1,23 @@
 #include <iostream>
 using namespace std;
-
-int solve(int x)
+int sovle(int a)
 {
     int ret = 0;
-    while (x)
+    while (a > 0)
     {
-        ret += x % 10;
-        x /= 10;
+        ret += a % 10;
+        a /= 10;
     }
     if (ret < 10)
         return ret;
     else
-        return solve(ret);
+        return sovle(ret); //記得回傳ret
 }
-
 int main()
 {
-    int n;
-    while (cin >> n && n)
+    int num;
+    while (cin >> num && num)
     {
-        cout << solve(n) << "\n";
+        cout << sovle(num) << endl;
     }
-    return 0;
 }

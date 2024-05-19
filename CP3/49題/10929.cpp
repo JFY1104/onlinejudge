@@ -1,33 +1,24 @@
 #include <iostream>
 using namespace std;
-
 int main()
 {
-    string s;
-    while (cin >> s)
+    string num;
+    while (cin >> num)
     {
-        if (s == "0")
+        if (num == "0") //=="0" 字串比對
             break;
-        int odd = 0, even = 0;
-        for (int i = 0; i < s.size(); i++)
+        int odd = 0;
+        int even = 0;
+        for (int i = 0; i < num.size(); i++)
         {
-            if (i % 2)
-            {
-                odd += s[i] - '0';
-            }
+            if (i % 2 == 0)   //誰是基數誰是偶數沒差
+                even += num[i] - '0';
             else
-            {
-                even += s[i] - '0';
-            }
+                odd += num[i] - '0';
         }
         if ((odd - even) % 11 == 0)
-        {
-            cout << s << " is a multiple of 11.\n";
-        }
+            cout << num << " is a multiple of 11." << endl;
         else
-        {
-            cout << s << " is not a multiple of 11.\n";
-        }
+            cout << num << " is not a multiple of 11." << endl;
     }
-    return 0;
 }

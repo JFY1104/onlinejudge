@@ -10,7 +10,7 @@ int main()
     while (T--)
     {
         cin >> s >> d;
-        if ((s + d) % 2 || s < d)
+        if ((s + d) % 2 || s < d) //記住條件
             cout << "impossible\n";
         else
         {

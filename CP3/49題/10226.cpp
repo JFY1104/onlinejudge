@@ -26,7 +26,7 @@ int main()
         {
             cout << i.first << " " << fixed << setprecision(4) << (double)i.second / sum * 100 << "\n";
         }
-        cout << "\n";
+        if(n) cout << "\n"; //最後一筆測資不用輸出空行
     }
     return 0;
 }

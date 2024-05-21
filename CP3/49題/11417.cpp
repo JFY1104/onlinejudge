@@ -12,11 +12,11 @@ using namespace std;
 //         GCD(b, a % b);
 //     }
 // }
-int GCD(int x, int y)
+int GCD( int a, int b )
 {
-    while ((x %= y) && (y %= x))
-        ;
-    return x + y;
+    if( b==0 )
+        return a;
+    return gcd( b, a%b );
 }
 
 int main()

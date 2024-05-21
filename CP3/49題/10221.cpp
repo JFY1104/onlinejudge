@@ -17,8 +17,8 @@ int main()
             a /= 60.0;
         if (a > 180.0)
             a = 360.0 - a;
-        chord = (r + s) * cos((90.0 - a / 2.0) / 180.0 * 3.1415926) * 2.0; //弦長
-        arc = 2.0 * 3.1415926 * (r + s) * a / 360.0; //弧長
+        chord = (r + s) * cos((90.0 - a / 2.0) / 180.0 * PI) * 2.0; //弦長
+        arc = 2.0 * PI * (r + s) * a / 360.0; //弧長
         cout << fixed << setprecision(6) << arc << " " << chord << "\n";
     }
     return 0;

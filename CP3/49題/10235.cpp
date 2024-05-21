@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int p[1000005];
+int p[1000005]={0};
 
 int main()
 {
